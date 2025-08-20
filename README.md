@@ -84,11 +84,34 @@ SSH into the instance using the private key.
 ```bash
 ssh -i "~/path/to/your-key.pem" ec2-user@<YOUR-EC2-PUBLIC-IP>
 ```
+
+-![SA-1.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/SA-1.png)
+
+-![SA-2.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/SA-2.png)
+
+-![SA-3.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/SA-3.png)
+
+-![SA-4.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/SA-4.png)
+
+-![SA-5.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/SA-4.png)
+
+-![SA-6.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/SA-6.png)
+
 On the EC2 instance, clone the project repository using HTTPS:
 ```bash
 sudo yum update -y
 git clone https://github.com/YourUsername/MarketPeak_Ecommerce.git
 ```
+
+-![GC-1.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/GC-1.png)
+
+-![GC-2.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/GC-2.png)
+
+-![GC-3.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/GC-3.png)
+
+-![GC-4.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/GC-4.png)
+
+-![GC-5.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/GC-5.png)
 
 ### 2.3 Web Server Installation and Configuration
 Installed the Apache HTTP Server (httpd).
@@ -97,6 +120,10 @@ sudo yum install httpd -y
 sudo systemctl start httpd
 sudo systemctl enable httpd
 ```
+
+-![httpd-1](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/httpd-1.png)
+
+-![httpd](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/httpd-2.png)
 
 ### 2.4 Application Deployment
 Copied the application files to Apache's document root.
@@ -111,8 +138,18 @@ sudo cp -r MarketPeak_Ecommerce/* /var/www/html/
 sudo chmod -R 755 /var/www/html
 ```
 
+-![AD-1](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/AD-1.png)
+
+-![AD-2](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/AD-2.png)
+
+-![AD-3](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/AD-3.png)
+
 ### 2.5 Validation
 Accessed the EC2 instance's public IP address in a web browser to confirm the MarketPeak website was live and functional.
+
+-![MP-1](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/MP-1.png)
+
+-![MP-2](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/MP-2.png)
 
 ## Phase 3: CI/CD Workflow Implementation
 Development Branch Strategy
@@ -127,6 +164,13 @@ git commit -m "feat: add responsive product carousel to homepage"
 # Push branch to remote
 git push origin feat/new-product-carousel
 ```
+
+-![cicd-1](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/cicd-1.png)
+
+-![cicd-2](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/cicd-2.png)
+
+-![cicd-3](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/cicd-3.png)
+
 
 ## Pull Request & Merge
 - Pushed feature branch to GitHub.
@@ -143,7 +187,17 @@ sudo git pull origin main
 sudo systemctl restart httpd
 ```
 
+-![PD-1](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/PD-1.png)
+
+-![PD-2](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/PD-2.png)
+
+-![PD-3](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/PD-3.png)
+
+-![PD-04](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Server_Access/PD-4.png)
+
+
 ## Troubleshooting & Issue Resolution
+
 Issue 1: Apache Default "It Works!" Page is Displayed
   - Problem: The browser showed the default Apache test page instead of the MarketPeak website.
   - Root Cause: Application files were not correctly placed in, or permissions were insufficient for, the /var/www/html/ directory.
@@ -154,7 +208,7 @@ Issue 1: Apache Default "It Works!" Page is Displayed
       - Restarted the web server: sudo systemctl restart httpd
 
 Issue 2: Permission Denied (Publickey) on SSH Login
-    - Problem: Could not SSH into the EC2 instance.
+- Problem: Could not SSH into the EC2 instance.
     - Root Cause: Incorrect permissions on the private key file or wrong username.
     - Solution:
         - Set strict permissions on the key: chmod 400 your-key.pem
