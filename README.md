@@ -43,6 +43,12 @@ git add .
 git commit -m "feat: initial commit with base e-commerce template structure"
 ```
 
+-![2.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Phase1_Screenshots/2.png)
+
+-![3.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Phase1_Screenshots/3.png)
+
+-![4.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Phase1_Screenshots/4.png)
+
 ### 1.4 GitHub Repository Synchronization
 - Created a new public repository on GitHub named MarketPeak_Ecommerce (no README, .gitignore, or license).
 - Added the remote origin and pushed the code.
@@ -51,6 +57,10 @@ git remote add origin https://github.com/YourUsername/MarketPeak_Ecommerce.git
 git branch -M main
 git push -u origin main
 ```
+
+-![5.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Phase1_Screenshots/5.png)
+
+-![6.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Phase1_Screenshots/6.png)
 
 ## Phase 2: AWS Infrastructure and Deployment
 
@@ -62,6 +72,12 @@ git push -u origin main
     - Inbound: SSH (22), HTTP (80)
     - Outbound: All traffic (0.0.0.0/0)
 - Key Pair: Created and downloaded a new .pem key pair for SSH access.
+
+-![ec2-1.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/EC2_Screenshot/ec2-1.png)
+
+-![ec2-2.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/EC2_Screenshot/ec2-2.png)
+
+-![ec2-3.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/EC2_Screenshot/ec2-3.png)
 
 ### 2.2 Server Access and Repository Cloning
 SSH into the instance using the private key.
