@@ -23,11 +23,14 @@ mkdir MarketPeak_Ecommerce
 cd MarketPeak_Ecommerce
 git init
 ```
+-![1.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Phase1_Screenshots/1.png)
 
 ### 1.2 Template Acquisition and Preparation
 - Sourced a production-ready e-commerce HTML template from Topplate.
 - Extracted the template contents into the MarketPeak_Ecommerce directory.
 - Performed basic branding customizations (updated site title, logo, color scheme in index.html and css/style.css).
+
+-![02.png](https://github.com/Abrahamnosa23/MarketPeak_Ecommerce/blob/main/Screenshot/Phase1_Screenshots/02.png)
 
 ### 1.3 Initial Commit
 ```bash
